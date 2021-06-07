@@ -3,6 +3,7 @@ package spring.web;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import spring.service.ReplyService;
@@ -15,6 +16,7 @@ public class ReplyController {
     // 서비스 연결
     public final ReplyService replyService;
 
+    @RequestMapping("/replywrite")
     public String replywrite(ReplyDto replyDto, RedirectAttributes re) {
         // input에 name 과 dto 의 필드명과 동일하면 자동 주입
 
