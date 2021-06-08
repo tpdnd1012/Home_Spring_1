@@ -24,6 +24,8 @@ public class ReplyController {
 
         re.addAttribute("id", replyDto.getPostid());
 
+        re.addAttribute("count", -1);
+
         return "redirect:/postview";
 
     }
@@ -35,6 +37,8 @@ public class ReplyController {
         replyService.replydelete(id);
 
         re.addAttribute("id", postid);
+
+        re.addAttribute("count", -1);
 
         return "redirect:/postview";
 
